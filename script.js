@@ -6,6 +6,16 @@ function toggleMenu() {
     toggle.classList.toggle('open');
   }
 
+ // Scroll effect for dropdown
+  window.addEventListener('scroll', () => {
+    const menu = document.getElementById('mobileMenu');
+    if (window.scrollY > 10) {
+      menu.classList.add('scrolls');
+    } else {
+      menu.classList.remove('scrolls');
+    }
+  });
+
   // Scroll effect for navbar expansion
   window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
